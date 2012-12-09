@@ -1,0 +1,2 @@
+module ApplicationPostsHelper
+end

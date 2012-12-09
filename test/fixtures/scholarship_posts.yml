@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  title: MyString
+  content: MyText
+  scholarship_count: 1
+  max_word_count: 1
+  amount_per_scholarship: 9.99
+
+two:
+  user_id: 1
+  title: MyString
+  content: MyText
+  scholarship_count: 1
+  max_word_count: 1
+  amount_per_scholarship: 9.99
