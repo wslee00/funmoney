@@ -1,7 +1,9 @@
 Funmoney::Application.routes.draw do
-  get "application_posts/show"
+  resources :users
 
-  get "users/show"
+  root to: 'scholarship_posts#show_all'
+
+  get "application_posts/show"
 
   get "scholarship_posts/show_all"
 

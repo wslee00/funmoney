@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121209151655) do
+ActiveRecord::Schema.define(:version => 20121209163814) do
 
   create_table "application_posts", :force => true do |t|
     t.integer  "scholarship_post_id"
@@ -41,8 +41,11 @@ ActiveRecord::Schema.define(:version => 20121209151655) do
     t.integer  "karma"
     t.decimal  "money_earned"
     t.integer  "user_type"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "password_digest"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end

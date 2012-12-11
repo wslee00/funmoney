@@ -1,2 +1,26 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="row">
+  <aside class="span4" style="width:700px">
+    <section>
+    	<%= gravatar_for @user %>
+      <h1><%= @user.name %></h1>
+      <br>
+      Money earned for college: <span class="money">$1200</span> <br>
+      <%= link_to 'View your Citibank account', '' %>
+  	<br\>
+  	<p>FunMoney points: <b>560</b></p>
+    </section>
+  </aside>
+  <div class="span8">
+  	
+
+  </div>
+  <div class="span8">
+    <% if @user.scholarship_posts.any? %>
+      <h3>Scholarship Posts (<%= @user.scholarship_posts.count %>)</h3>
+      <ol class="scholarshipposts">
+        <%= render @scholarship_posts %>
+      </ol>
+
+    <% end %>
+  </div>
+</div>
